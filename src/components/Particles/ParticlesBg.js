@@ -6,7 +6,7 @@ const particleOpt = pConfig;
 
 export default function ParticlesBg() {
     return (
-        <div>
+        <div className="overlay">
             <Particles params={particleOpt} />
         </div>
     );
