@@ -3,12 +3,12 @@
 
     &__container {
         width: 100%;
-        max-width: 10rem;
+        max-width: 20rem;
         background-color: $color-white-1;
         line-height: 0;
         border-radius: .7rem;
         margin: 0 auto;
-        box-shadow: 2px 1px 6px $color-primary-blue;
+        // box-shadow: 2px 1px 6px $color-primary-blue;
         position: relative;
     }
 
