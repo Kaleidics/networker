@@ -38,7 +38,7 @@ export default class PodcastContainer extends React.Component {
         console.log("in render", this.state.podcast);
         return (
             <div className="podcastcontainer">
-                <h2 className="heading-secondary u-text-shadow">Latest Episodes</h2>
+                <h2 className="heading-secondary">Latest Episodes</h2>
                 <hr className="separator"/>
                 {podcastList}
             </div>
