@@ -12,8 +12,8 @@ export default class Header extends React.Component {
                     <ParticlesBg />
                 </div>
                 <div className="header__main">
-                    <h1 className="heading-primary u-text-shadow">the netwrkr podcast</h1>
-                    <p className="paragraph u-text-shadow">
+                    <h1 className="heading-primary">the netwrkr podcast</h1>
+                    <p className="paragraph">
                         The podcast all about <span className="u-emphasize">networking</span> and <span className="u-emphasize">networking.</span> Hosted by <span className="u-emphasize">Julian Abeleda.</span>
                     </p>
                 </div>

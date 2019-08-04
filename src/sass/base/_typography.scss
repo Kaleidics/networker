@@ -5,7 +5,7 @@ body {
 
 .heading-primary {
     text-align: center;
-    color: $color-white-1;
+    color: $color-primary-blue;
     font-size: 3.2rem;
     text-transform: uppercase;
     margin: 2rem 0;
@@ -15,14 +15,14 @@ body {
 
 .heading-secondary {
     text-align: center;
-    color: $color-white-1;
+    color: $color-primary-blue;
     letter-spacing: 2px;
     font-size: 2rem;
     animation: moveInLeft 1.5s linear backwards;
 }
 
 .paragraph {
-    color: $color-white-1;
+    color: $color-primary-blue;
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.6;
