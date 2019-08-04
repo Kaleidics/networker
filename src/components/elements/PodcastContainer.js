@@ -29,7 +29,7 @@ export default class PodcastContainer extends React.Component {
         let podcastList;
         podcastList = this.state.podcast.map( (podcast, index) => {
             return (
-                <div className="podcast" style={{ animationDelay: `${index / 15}s` }}>
+                <div className="podcast" style={{ animationDelay: `${index / 15}s` }} tabindex={`${index}`}>
                     <AudioCard title={podcast.title} art={podcast.itunes.image} source={podcast.enclosure.url} skipBackSeconds={10} skipForwardSeconds={30} color="#006bb6" background="aliceblue" key={index} />
                 </div>
             );

@@ -8,7 +8,7 @@
     animation: fadeIn 1s ease-in backwards;
     box-shadow: 2px 1px 6px $color-primary-blue;
 
-    &:hover {
+    &:hover, &:active, &:focus {
         transform: translateY(-5px);
         box-shadow: 2px 1px 6px $color-primary-gold;
     }
