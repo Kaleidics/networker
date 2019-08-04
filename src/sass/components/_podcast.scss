@@ -1,0 +1,13 @@
+.podcast {
+    width: 100%;
+    overflow: hidden;
+    background-color: aliceblue;
+    margin: 2rem auto;
+    border-radius: .7rem;
+    transition: all .3s;
+
+    &:hover {
+            transform: translateY(-5px);
+        box-shadow: 2px 1px 6px $color-primary-gold;
+    }
+}

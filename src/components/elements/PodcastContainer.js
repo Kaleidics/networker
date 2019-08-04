@@ -10,7 +10,7 @@ export default class PodcastContainer extends React.Component {
         super(props);
 
         this.state = {
-            podcast: ""
+            podcast: []
         };
     }
 
@@ -19,13 +19,38 @@ export default class PodcastContainer extends React.Component {
             let feed = await parser.parseURL(CORS_PROXY + "https://pinecast.com/feed/netwrkr");
             console.log(feed.items);
             this.setState({
-                podcast: feed.items[0].enclosure.url
+                podcast: feed.items
             });
         })();
     }
 
     render() {
+
+        let podcastList;
+        podcastList = this.state.podcast.map( (podcast, index) => {
+            return (
+                <div className="podcast">
+                    <AudioCard 
+                    title={podcast.title} 
+                    art={podcast.itunes.image} 
+                    source={podcast.enclosure.url} 
+                    skipBackSeconds={10} 
+                    skipForwardSeconds={30} 
+                    color="#006bb6"
+                    background="aliceblue"
+                    key={index}
+                    />
+                </div>
+            );
+        });
+
         console.log("in render", this.state.podcast);
-        return <div />;
+        return (
+            <div className="podcastcontainer">
+                <h2 className="heading-secondary u-text-shadow">Latest Episodes</h2>
+                <hr className="separator"/>
+                {podcastList}
+            </div>
+        );
     }
 }

@@ -1,0 +1,17 @@
+.footer {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        width: 5rem;
+        margin: 0 1rem;
+    }
+
+    &__social {
+        width: 5rem;
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,8 @@
+.separator {
+    margin: .5rem auto;
+    width: 33%;
+    height: 3px;
+    border: none;
+    background: linear-gradient(to right, $color-primary-teal 20%, $color-primary-gold);
+    border-radius: 2.5rem;
+}
