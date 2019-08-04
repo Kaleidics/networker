@@ -17,7 +17,7 @@ body {
 .App {
     min-height: 100vh;
     padding: .5rem 0;
-    background: linear-gradient(to right, $color-primary-blue, $color-primary-teal);
+    background: linear-gradient(to right, $color-primary-blue, $color-primary-teal 20%, $color-primary-gold);
 }
 
 .container {
