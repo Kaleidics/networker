@@ -5,9 +5,11 @@
     margin: 2rem auto;
     border-radius: .7rem;
     transition: all .3s;
+    animation: fadeIn 1s ease-in backwards;
+
 
     &:hover {
-            transform: translateY(-5px);
+        transform: translateY(-5px);
         box-shadow: 2px 1px 6px $color-primary-gold;
     }
 }

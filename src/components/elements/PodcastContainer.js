@@ -29,17 +29,8 @@ export default class PodcastContainer extends React.Component {
         let podcastList;
         podcastList = this.state.podcast.map( (podcast, index) => {
             return (
-                <div className="podcast">
-                    <AudioCard 
-                    title={podcast.title} 
-                    art={podcast.itunes.image} 
-                    source={podcast.enclosure.url} 
-                    skipBackSeconds={10} 
-                    skipForwardSeconds={30} 
-                    color="#006bb6"
-                    background="aliceblue"
-                    key={index}
-                    />
+                <div className="podcast" style={{ animationDelay: `${index / 15}s` }}>
+                    <AudioCard title={podcast.title} art={podcast.itunes.image} source={podcast.enclosure.url} skipBackSeconds={10} skipForwardSeconds={30} color="#006bb6" background="aliceblue" key={index} />
                 </div>
             );
         });
