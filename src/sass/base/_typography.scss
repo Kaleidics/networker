@@ -5,17 +5,17 @@ body {
 
 .heading-primary {
     text-align: center;
-    color: $color-primary-blue;
+    color: $color-primary-teal;
     font-size: 3.2rem;
     text-transform: uppercase;
-    margin: 2rem 0;
+    margin: 0;
     letter-spacing: .5rem;
     animation: moveInLeft .8s linear backwards;
 }
 
 .heading-secondary {
     text-align: center;
-    color: $color-primary-blue;
+    color: $color-primary-teal;
     letter-spacing: 2px;
     font-size: 2rem;
     animation: moveInLeft 1.5s linear backwards;
