@@ -2,30 +2,3 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
-
-.heading-primary {
-    text-align: center;
-    color: $color-primary-gold;
-    font-size: 3.2rem;
-    text-transform: uppercase;
-    margin: 0 0 1rem 0;
-    letter-spacing: .5rem;
-    animation: moveInLeft .8s linear backwards;
-}
-
-.heading-secondary {
-    text-align: center;
-    color: $color-primary-gold;
-    letter-spacing: 2px;
-    font-size: 2rem;
-    animation: moveInLeft 1.5s linear backwards;
-}
-
-.paragraph {
-    color: $color-primary-blue;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
-    animation: moveInLeft 1.3s linear backwards;
-}
