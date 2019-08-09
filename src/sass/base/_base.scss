@@ -12,12 +12,15 @@ html {
 
 body {
     box-sizing: border-box;
+    background: linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center, linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, rgba($dot-color, 0.3);
+    background-size: $dot-space $dot-space;
 }
 
 .App {
-  
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, transparent, rgba($color-white-1, .8), rgba($color-white-1, .8),  transparent);
 }
 
 .container {
- 
 }
