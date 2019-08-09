@@ -8,7 +8,7 @@ import config2 from '../Particles/Particlesjs-config2';
 export default class Header extends React.Component {
     render() {
 
-        let latestPodcast = this.props.latestPodcast[0] ? <AudioCard title={this.props.latestPodcast[0].title} source={this.props.latestPodcast[0].enclosure.url} color="#15c5bf" background="transparent" /> : "";
+        let latestPodcast = this.props.latestPodcast[0] ? <AudioCard title={this.props.latestPodcast[0].title} source={this.props.latestPodcast[0].enclosure.url} color="#fdb927" background="transparent" /> : "";
         return (
             <header className="header">
                 <div className="header__container">

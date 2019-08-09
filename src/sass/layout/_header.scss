@@ -40,6 +40,10 @@
     &__latest-podcast {
         min-width: 25rem;
         width: 33%;
+
+        * {
+            font-size: 1.6rem;
+        }
     }
 
     &__content {

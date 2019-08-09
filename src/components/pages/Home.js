@@ -33,6 +33,7 @@ export default class Home extends React.Component {
             <div className="home">
                 <Header latestPodcast={this.state.podcast} />
                 <HostingSites />
+                <PodcastContainer />
             </div>
         );
     }
