@@ -1,0 +1,14 @@
+.nav {
+    &__navbar {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        font-size: 1.6rem;
+        color: $color-black-1;
+        font-weight: 700;
+        padding: .8rem 0;
+    }
+}
