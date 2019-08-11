@@ -48,18 +48,23 @@ export default class Home extends React.Component {
                        let latestImage = latestPodcastData.itunes ? latestPodcastData.itunes.image : '';
                        let latestTitle = latestPodcastData.title;
                        console.log(latestSrc)
+                        let latestPlayer = latestPodcastData ? (
+                            <div className="main-audio-player">
+                                <div className="main-audio-player__content">
+                                    <img className="main-audio-player__image" src={latestImage} />
+                                    <h3 className="main-audio-player__title">{latestTitle}</h3>
+                                </div>
+                                <AudioPlayer src={latestSrc} autoPlay={false} />
+                            </div>
+                        ) : (
+                            ""
+                        );
 
                        return (
                            <div className="home">
                                <Header onClick={this.setCurrentView} selectedView={this.state.currentView} />
                                <MainContainer selectedView={this.state.currentView} />
-                               <div className="main-audio-player">
-                                   <div className="main-audio-player__content">
-                                    <img className="main-audio-player__image" src={latestImage} />
-                                    <h3 className="main-audio-player__title" >{latestTitle}</h3>
-                                   </div>
-                                   <AudioPlayer src={latestSrc} />
-                               </div>
+                               {latestPlayer}
                            </div>
                        );
                    }
