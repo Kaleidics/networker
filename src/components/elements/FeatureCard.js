@@ -3,7 +3,7 @@ import React from 'react';
 export default class FeatureCard extends React.Component {
     render() {
         return (
-            <div className="feature-card">
+            <div className="feature-card" style={this.props.style}>
                 <div className="feature-card__content">
                 <h2 className="feature-card__title">
                     {this.props.title}

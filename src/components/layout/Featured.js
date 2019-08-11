@@ -25,12 +25,12 @@ export default class Featured extends React.Component {
 
     render() {
         let featuredPodcasts = this.state.podcasts.map( (podcast, index) => {
-            return <FeatureCard title={podcast.title} name={podcast.itunes.author} image={podcast.itunes.image} key={index} />
-        })
+            return <FeatureCard title={podcast.title} name={podcast.itunes.author} image={podcast.itunes.image} key={index} style={{ animationDelay: `${index / 15}s` }} />;
+        });
 
         console.log('this.sate.podcasts', this.state.podcasts);
         return(
-            <section className="featured-section">
+            <section className="podcast-section">
             {featuredPodcasts}
             </section>
         )

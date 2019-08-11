@@ -10,6 +10,8 @@
     box-shadow: rgba($color-black-1, 0.3) 2px 1px 3px 1px;
     position: relative;
     margin-right: 3rem;
+    animation: fadeIn .75s ease-in backwards;
+
 
     &__content {
         margin: auto 0;
