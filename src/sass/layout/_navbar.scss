@@ -1,4 +1,6 @@
 .nav {
+    margin-bottom: 5rem;
+
     &__navbar {
         list-style-type: none;
         display: flex;
@@ -10,5 +12,6 @@
         color: $color-black-1;
         font-weight: 700;
         padding: .8rem 0;
+        cursor: pointer;
     }
 }

@@ -5,6 +5,7 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/featurecard";
 @import "components/imagelist";
 @import "components/podcast";
 @import "components/podcastcontainer";
@@ -12,6 +13,7 @@
 
 @import "layout/footer";
 @import "layout/header";
+@import "layout/featured";
 @import "layout/navbar";
 
 @import "pages/home";

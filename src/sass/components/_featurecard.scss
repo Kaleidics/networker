@@ -1,0 +1,84 @@
+.feature-card {
+    display: flex;
+    width: 25rem;
+    background: linear-gradient(to top right, $color-primary-teal, $color-primary-blue);
+    height: 34rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem 3rem;
+    border-radius: 1.2rem;
+    box-shadow: rgba($color-black-1, 0.3) 2px 1px 3px 1px;
+    position: relative;
+    margin-right: auto;
+
+    &__content {
+        margin: auto 0;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: $color-white-1;
+        font-size: 2.8rem;
+        word-spacing: 25rem;
+        margin-bottom: 5rem;
+    }
+
+    &__name {
+        color: $color-white-1;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba($color-black-1, 0.5);
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    &__occupation {
+        color: rgba($color-grey-1, 0.5);
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    &__image-container {
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 2rem;
+        background: $color-white-1;
+        padding: 0.3rem;
+        border-radius: 1.5rem;
+        box-shadow: rgba($color-black-1, 0.5) 2px 1px 3px 1px;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 1.2rem;
+    }
+
+    &__play {
+        width: 4.5rem;
+        height: 4.5rem;
+        background: $color-white-1;
+        border-radius: 50%;
+        box-shadow: rgba($color-primary-gold, 0.9) 2px 1px 5px 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        margin-left: .5rem;
+        border-left: 10px solid $color-primary-teal;
+    }
+}

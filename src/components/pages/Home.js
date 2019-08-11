@@ -14,22 +14,22 @@ export default class Home extends React.Component {
         super(props);
 
         this.state = {
-            currentView: "1"
+            currentView: 1
         };
+        this.setCurrentView = this.setCurrentView.bind(this);
     }
 
     setCurrentView(view) {
         this.setState({
             currentView: view
-        });
-        console.log("clicked", this.state.currentView);
+        }, () => console.log("clicked", this.state.currentView));
     }
 
     render() {
         return (
             <div className="home">
-                <Header onClick={this.setCurrentView}/>
-                <MainContainer />
+                <Header onClick={this.setCurrentView} selectedView={this.state.currentView}/>
+                <MainContainer selectedView={this.state.currentView} />
             </div>
         );
     }
