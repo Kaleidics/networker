@@ -1,3 +1,54 @@
 .home {
     padding: 0 25rem;
 }
+
+.main-audio-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    
+
+    &__content {
+        width: 20rem;
+        position: absolute;
+        top: -4rem;
+        left: 5%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border-radius: .7rem;
+        border: 3px solid $color-primary-blue;
+        background: $color-white-1;
+        box-shadow: rgba($color-black-1, 0.3) 2px 1px 4px 2px;
+
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        color: $color-black-1;
+    }
+
+    &__image {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 2rem;
+        border-radius: 7px;
+    }
+}
+
+.react-h5-audio-player {
+    .flex {
+        background: $color-white-1 !important;
+        padding-left: 20vw !important;
+    }
+    .toggle-play-wrapper {
+        .toggle-play-button {
+            background-color: $color-primary-blue !important;
+        }
+    }
+    .pause-icon {
+        box-shadow: $color-primary-blue 7px 0px 0px 0px inset !important;
+    }
+}
