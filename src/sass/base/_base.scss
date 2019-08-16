@@ -19,8 +19,9 @@ body {
 .App {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, transparent, rgba($color-white-1, .8), rgba($color-white-1, .8),  transparent);
+    background: linear-gradient(to bottom right, transparent, rgba($color-white-1, .6), rgba($color-white-1, .6),  transparent);
 }
 
 .container {
+    margin-bottom: 20rem;
 }

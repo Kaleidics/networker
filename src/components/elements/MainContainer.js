@@ -1,6 +1,7 @@
 import React from 'react';
 import Featured from '../layout/Featured';
 import AllPodcasts from '../layout/AllPodcasts';
+import AboutShow from '../layout/AboutShow';
 
 export default class MainContainer extends React.Component {
 
@@ -9,10 +10,10 @@ export default class MainContainer extends React.Component {
 
         if (this.props.selectedView === 1) {
             content = <Featured />
-        }
-
-        if (this.props.selectedView === 2) {
+        } else if (this.props.selectedView === 2) {
             content = <AllPodcasts />
+        } else if (this.props.selectedView === 3) {
+            content = <AboutShow />
         }
         
         return (

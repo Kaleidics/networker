@@ -24,7 +24,7 @@ export default class Featured extends React.Component {
     }
 
     render() {
-        let featuredPodcasts = this.state.podcasts.map( (podcast, index) => {
+        let featuredPodcasts = this.state.podcasts.slice(0,3).map( (podcast, index) => {
             return <FeatureCard title={podcast.title} name={podcast.itunes.author} image={podcast.itunes.image} key={index} style={{ animationDelay: `${index / 15}s` }} />;
         });
 
