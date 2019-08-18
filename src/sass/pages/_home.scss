@@ -10,6 +10,7 @@
     width: 100%;
     left: 0;
     z-index: 10000;
+    animation: moveInBottom .5s ease-out backwards;
     
 
     &__content {
@@ -25,7 +26,7 @@
         border: 3px solid $color-primary-blue;
         background: $color-white-1;
         box-shadow: rgba($color-black-1, 0.3) 2px 1px 4px 2px;
-
+        animation: moveInLeft .8s ease-out backwards;
     }
 
     &__title {
