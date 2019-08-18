@@ -13,10 +13,13 @@ class FeatureCard extends React.Component {
         console.log('card', this.props.currentPlaying, this.props.mp3)
         let activeCircle;
 
+        if (this.props.currentPlaying) {
+
+        
         if (this.props.currentPlaying.mp3 === this.props.mp3) {
             activeCircle = <div className="feature-card__play-triggered" />;
         }
-
+    }
         return (
             <div className="feature-card" style={this.props.style}>
                 <div className="feature-card__content">

@@ -1,6 +1,6 @@
 .home {
     // padding: 0 25rem;
-    width: 80%;
+    width: 55%;
     margin: 0 auto;
 }
 
@@ -9,6 +9,7 @@
     bottom: 0;
     width: 100%;
     left: 0;
+    z-index: 10000;
     
 
     &__content {

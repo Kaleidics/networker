@@ -6,6 +6,7 @@ import MainContainer from "../elements/MainContainer";
 import ReactAudioPlayer from "react-audio-player";
 import AudioCard from "audiocard";
 import AudioPlayer from "react-h5-audio-player";
+import Banner from "../layout/Banner";
 
 import { connect } from "react-redux";
 import { fetchPodcasts } from "../../actions/index";
@@ -61,7 +62,7 @@ class Home extends React.Component {
                                     <img className="main-audio-player__image" src={latestImage} />
                                     <h3 className="main-audio-player__title">{latestTitle}</h3>
                                 </div>
-                                <AudioPlayer src={latestSrc} autoPlay={false} />
+                                <AudioPlayer src={latestSrc} autoPlay={true} />
                             </div>
                         ) : (
                             null
@@ -70,6 +71,7 @@ class Home extends React.Component {
                        return (
                            <div className="home">
                                <Header onClick={this.setCurrentView} selectedView={this.state.currentView} />
+                               <Banner data={this.props.podcasts[0]}/>
                                <MainContainer selectedView={this.state.currentView} />
                                {latestPlayer}
                            </div>

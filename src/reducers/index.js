@@ -12,7 +12,7 @@ export const Reducer = (state = initialState, action) => {
         return Object.assign({}, state, {
             podcastContent: action.podcasts,
             podcasts: action.podcasts.items,
-            currentPlaying: action.podcasts.items[0]
+            // currentPlaying: action.podcasts.items[0]
         });
     }
 
