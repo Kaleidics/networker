@@ -18,8 +18,8 @@
    }
 
    &__player-container {
-    width: 6.5rem;
-    height: 6.5rem;
+    min-width: 6.5rem;
+    min-height: 6.5rem;
     background: #fff;
     border-radius: 50%;
     
