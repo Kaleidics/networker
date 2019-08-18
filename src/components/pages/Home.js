@@ -7,30 +7,23 @@ import ReactAudioPlayer from "react-audio-player";
 import AudioCard from "audiocard";
 import AudioPlayer from "react-h5-audio-player";
 
-import Parser from "rss-parser";
+import { connect } from "react-redux";
+import { fetchPodcasts } from "../../actions/index";
 
-let parser = new Parser();
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-
-export default class Home extends React.Component {
+class Home extends React.Component {
                    constructor(props) {
                        super(props);
 
                        this.state = {
-                           currentView: 1,
-                           currentPodcast: ""
+                           currentView: 1
+                           
                        };
                        this.setCurrentView = this.setCurrentView.bind(this);
                    }
 
                    componentDidMount() {
-                       (async () => {
-                           let feed = await parser.parseURL(CORS_PROXY + "https://pinecast.com/feed/netwrkr");
-                           console.log(feed.items);
-                           this.setState({
-                               currentPodcast: feed.items[0]
-                           });
-                       })();
+                       console.log('trigged')
+                       this.props.dispatch(fetchPodcasts());
                    }
 
                    setCurrentView(view) {
@@ -43,11 +36,25 @@ export default class Home extends React.Component {
                    }
 
                    render() {
-                       let latestPodcastData = this.state.currentPodcast;
-                       let latestSrc = latestPodcastData.enclosure ? latestPodcastData.enclosure.url : '';
-                       let latestImage = latestPodcastData.itunes ? latestPodcastData.itunes.image : '';
-                       let latestTitle = latestPodcastData.title;
+                       console.log('current playing', this.props.currentPlaying)
+                       let latestPodcastData;
+                       let latestSrc
+                       let latestImage
+                       let latestTitle
+
+                       if (this.props.currentPlaying) {
+                           console.log("home current", this.props.currentPlaying)
+                        latestPodcastData = this.props.currentPlaying
+                        latestSrc = latestPodcastData.enclosure ? latestPodcastData.enclosure.url : latestPodcastData.mp3;
+                        latestImage = latestPodcastData.itunes ? latestPodcastData.itunes.image : latestPodcastData.image;
+                        latestTitle = latestPodcastData.title;
+                       }
+                       
+                       
+                       
                        console.log(latestSrc)
+
+
                         let latestPlayer = latestPodcastData ? (
                             <div className="main-audio-player">
                                 <div className="main-audio-player__content">
@@ -57,7 +64,7 @@ export default class Home extends React.Component {
                                 <AudioPlayer src={latestSrc} autoPlay={false} />
                             </div>
                         ) : (
-                            ""
+                            null
                         );
 
                        return (
@@ -69,3 +76,10 @@ export default class Home extends React.Component {
                        );
                    }
                }
+
+const mapStateToProps = state => ({
+    podcasts: state.podcasts,
+    currentPlaying: state.currentPlaying
+});
+
+export default connect(mapStateToProps)(Home)

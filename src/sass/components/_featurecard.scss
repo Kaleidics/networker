@@ -12,8 +12,7 @@
     position: relative;
     margin-right: 3rem;
     margin-bottom: 3rem;
-    animation: fadeIn .75s ease-in backwards;
-
+    animation: fadeIn 0.75s ease-in backwards;
 
     &__content {
         margin: auto 0;
@@ -40,6 +39,13 @@
         color: rgba($color-grey-1, 0.5);
         font-size: 1.3rem;
         font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    &__shownotes {
+        color: $color-white-1;
+        font-size: 1.3rem;
+        font-weight: 400;
         margin-bottom: 3rem;
     }
 
@@ -75,6 +81,27 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        z-index: 1000;
+    }
+
+    &__play-triggered {
+        width: 6rem;
+        height: 6rem;
+        background: none;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-top: 2px dashed #fdb927;
+        border-right: 2px dashed #fdb927;
+        border-left: 2px dashed #fdb927;
+        border-bottom: 2px dashed #fdb927;
+        animation: spin 10s infinite linear;
     }
 
     &__arrow-right {
@@ -82,7 +109,7 @@
         height: 0;
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
         border-left: 10px solid $color-primary-teal;
     }
 }

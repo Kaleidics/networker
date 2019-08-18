@@ -11,8 +11,11 @@
     "react-h5-audio-player": "^1.2.1",
     "react-hot-loader": "^4.12.10",
     "react-particles-js": "^2.7.0",
+    "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
     "rss-parser": "^3.7.2",
     "styled-components": "^4.3.2"
   },
