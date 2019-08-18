@@ -2,6 +2,7 @@
     padding-top: 2rem;
     margin: 2rem auto;
     max-width: 105rem;
+    animation: moveInTop .8s ease-out backwards;
 
     &__container {
         display: flex;
