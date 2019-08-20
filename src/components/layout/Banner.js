@@ -38,8 +38,10 @@ import { setPlaying } from '../../actions/index';
          return (
              <div className="banner">
                  <div className="banner__main">
-                     <h1 className="banner__primary">NETWRKR with Julian Abeleda</h1>
-                     <h2 className="banner__secondary">Latest Episode</h2>
+                     <h1 className="banner__primary">
+                         NETWRKR <br /> Julian Abeleda
+                     </h1>
+                     <h2 className="banner__secondary">Latest Episode: {title}</h2>
                  </div>
                  <div className="banner__sub">
                      <div className="banner__player-container" onClick={this.handleSetPlaying}>
@@ -48,7 +50,7 @@ import { setPlaying } from '../../actions/index';
                      </div>
 
                      <div className="banner__content-container">
-                         <h3 className="banner__title">{title}</h3>
+                         {/* <h3 className="banner__title">{title}</h3> */}
                          <p className="banner__snippet">{snippet}</p>
                      </div>
                      <div className="banner__image-container">

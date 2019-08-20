@@ -1,6 +1,4 @@
 .home {
-    // padding: 0 25rem;
-    width: 55%;
     margin: 0 auto;
 }
 
@@ -10,8 +8,7 @@
     width: 100%;
     left: 0;
     z-index: 10000;
-    animation: moveInBottom .5s ease-out backwards;
-    
+    animation: moveInBottom 0.5s ease-out backwards;
 
     &__content {
         width: 20rem;
@@ -22,11 +19,18 @@
         display: flex;
         align-items: center;
         padding: 1rem;
-        border-radius: .7rem;
+        border-radius: 0.7rem;
         border: 3px solid $color-primary-blue;
         background: $color-white-1;
         box-shadow: rgba($color-black-1, 0.3) 2px 1px 4px 2px;
-        animation: moveInLeft .8s ease-out backwards;
+        animation: moveInLeft 0.8s ease-out backwards;
+
+        @media (max-width: 800px) {
+            width: 15rem;
+
+            top: -9.5rem;
+            left: 1%;
+        }
     }
 
     &__title {
@@ -46,6 +50,10 @@
     .flex {
         background: $color-white-1 !important;
         padding-left: 20vw !important;
+
+        @media (max-width: 800px) {
+            padding-left: 0 !important;
+        }
     }
     .toggle-play-wrapper {
         .toggle-play-button {

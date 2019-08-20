@@ -7,14 +7,27 @@
     max-width: 105rem;
     animation: moveInBottom 0.8s ease-out backwards;
 
+    @media(max-width:800px) {
+        max-width: 30rem;
+        margin: 1rem auto;
+    }
+
     &__main {
         margin: 0 2rem;
+          @media(max-width:800px) {
+        margin: 0;
+        
+    }
     }
 
     &__sub {
         display: flex;
         align-items: center;
         justify-content: space-between;
+          @media(max-width:800px) {
+       flex-direction: row;
+
+    }
     }
 
     &__primary {
@@ -22,11 +35,23 @@
         color: $color-white-1;
         letter-spacing: 2px;
         line-height: 1.6;
+        @media(max-width:800px) {
+        font-size: 2rem;
+        text-align: center;
+        
+        
+    }
+    
     }
     &__secondary {
         font-size: 2rem;
         color: $color-white-1;
         letter-spacing: 2px;
+        @media(max-width:800px) {
+        font-size: 1.5rem;
+        text-align: center;
+        
+    }
     }
     &__player-container {
         min-width: 6.5rem;
@@ -47,12 +72,22 @@
         color: $color-white-1;
         text-transform: uppercase;
         line-height: 1.6;
+        @media(max-width:800px) {
+        font-size: 2rem;
+        text-align: center;
+        
+    }
     }
 
     &__snippet {
         font-size: 2rem;
         color: $color-white-1;
         line-height: 1.5;
+         @media(max-width:800px) {
+        display: none;
+        
+        
+    }
     }
 
     &__player-arrow {
@@ -97,7 +132,7 @@
     }
 
     &__image {
-        width: 15rem;
+        width: 6.5rem;
         border-radius: 1.2rem;
     }
 }

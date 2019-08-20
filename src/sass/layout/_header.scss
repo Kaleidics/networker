@@ -8,10 +8,19 @@
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
+        width: 100%;
+
+        @media(max-width:800px) {
+            flex-direction: column;
+        }
     }
 
     &__hero {
         width: 100%;
         max-width: 30rem;
+
+        @media(max-width:800px) {
+            margin: 0 auto;
+        }
     }
 }

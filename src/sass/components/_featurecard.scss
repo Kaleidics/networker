@@ -10,8 +10,14 @@
     border-radius: 1.2rem;
     box-shadow: rgba($color-black-1, 0.3) 2px 1px 3px 1px;
     position: relative;
+    
     margin-bottom: 3rem;
     animation: fadeIn 0.75s ease-in backwards;
+
+      @media(max-width:800px) {
+        min-width: 30rem;
+        max-width: 30rem;
+    }
 
     &__content {
         margin: auto 0;
