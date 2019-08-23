@@ -11,9 +11,11 @@ export default class MainContainer extends React.Component {
 
         if (this.props.selectedView === 1) {
             content = <Featured />
-        } else if (this.props.selectedView === 2) {
-            content = <AllPodcasts />
-        } else if (this.props.selectedView === 3) {
+        } 
+        // else if (this.props.selectedView === 2) {
+        //     content = <AllPodcasts />
+        // } 
+        else if (this.props.selectedView === 3) {
             content = <AboutShow />
         } else if (this.props.selectedView === 4 ) {
             content = <AboutHost />

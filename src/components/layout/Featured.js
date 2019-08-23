@@ -6,16 +6,21 @@ class Featured extends React.Component {
 
     render() {
         console.log("featured", this.props.podcasts)
-        let featuredPodcasts = this.props.podcasts.slice(1,4).map((podcast, index) => {
+        let featuredPodcasts = this.props.podcasts.map((podcast, index) => {
             return <FeatureCard all={this.props} title={podcast.title} name={podcast.itunes.author} mp3={podcast.enclosure.url} image={podcast.itunes.image} content={podcast.contentSnippet} key={index} style={{ animationDelay: `${index / 15}s` }} />;
         });
 
         
-        return(
+        return (
             <section className="podcast-section">
-            {featuredPodcasts}
+                <div>
+                    <h2 className="heading-secondary">All Episodes</h2>
+                    <div className="roundedBottom u-margin-bottom-medium"></div>
+                </div>
+
+                <div className="podcast-section">{featuredPodcasts}</div>
             </section>
-        )
+        );
     }
 }
 

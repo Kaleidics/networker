@@ -1,14 +1,16 @@
 .header {
     padding-top: 2rem;
-    margin: 2rem auto;
-    max-width: 105rem;
+    // margin: 2rem auto;
+    // max-width: 105rem;
     animation: moveInTop .8s ease-out backwards;
 
     &__container {
         display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        width: 100%;
+    justify-content: flex-start;
+    align-items: baseline;
+    /* width: 100%; */
+    max-width: 105rem;
+    margin: auto;
 
         @media(max-width:800px) {
             flex-direction: column;
